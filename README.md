@@ -116,6 +116,14 @@ Pour toute question ou suggestion:
 MIT License - Copyright (c) 2025 Ayi NEDJIMI
 
 
+- --
+
+<div align="center">
+
+**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
+
+</div>
+
 ---
 
 <div align="center">
