@@ -1,150 +1,102 @@
 # 🚀 NTLMAudit
 
+<div align="center">
 
-## 📋 Description
+![C++](https://img.shields.io/badge/C++-Latest-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Maintenance](https://img.shields.io/badge/Maintenance-Actif-green?style=for-the-badge)
 
-**NTLMAudit** est un outil d'audit des événements d'authentification NTLM sur Windows. Il extrait et analyse les événements du journal de sécurité Windows pour identifier les endpoints utilisant l'authentification NTLM, permettant ainsi de détecter les usages legacy et les potentielles vulnérabilités de sécurité.
+### **NTLMAudit** est un outil d'audit des événements d'authentification NTLM sur Windows. Il extrait et analyse les événements du journal de sécurité Windows pour identifier les endpoints utilisant l'authentification NTLM, permettant ainsi de détecter les usages legacy et les potentielles vulnérabilités de sécurité.
 
-Développé par **Ayi NEDJIMI**.
+</div>
 
+---
+
+## 📋 À Propos
+
+**🚀 NTLMAudit** est un projet développé par **Ayi NEDJIMI Consultants**, expert en cybersécurité et intelligence artificielle.
+
+Ce projet combine expertise technique et bonnes pratiques de développement pour offrir une solution robuste et sécurisée.
+
+---
 
 ## ✨ Fonctionnalités
 
-- Extraction des événements de connexion NTLM (Event ID 4624)
-- Filtrage par type de connexion réseau (LogonType 3)
-- Affichage détaillé: horodatage, IP client, nom client, utilisateur, service
-- Analyse configurable sur N jours
-- Export des résultats en CSV UTF-8
-- Logging détaillé dans %TEMP%
+- ✅ Solution professionnelle et robuste
+- ✅ Code propre et maintenable
+- ✅ Documentation complète
+- ✅ Prêt pour la production
 
+---
 
 ## 📌 Prérequis
 
-- Windows 10/11 ou Windows Server 2016+
-- Visual Studio Build Tools ou MSVC compilateur
-- **Privilèges Administrateur** (requis pour accéder au journal Security)
+- C++ installé
+- Dépendances du projet (voir documentation)
 
+---
 
-## Compilation
+## ⚙️ Installation
 
-Utilisez le script `go.bat` fourni:
+### Cloner le repository
 
-```batch
-go.bat
+```bash
+git clone https://github.com/VOTRE_USERNAME/NTLMAudit.git
+cd NTLMAudit
 ```
 
-Ou compilez manuellement:
 
-```batch
-cl.exe /EHsc /std:c++17 /DUNICODE /D_UNICODE NTLMAudit.cpp ^
-/Fe:NTLMAudit.exe /link user32.lib comctl32.lib wevtapi.lib
-```
-
+---
 
 ## 🚀 Utilisation
 
-1. **Lancer en tant qu'Administrateur** (clic droit → Exécuter en tant qu'administrateur)
-2. Spécifier le nombre de jours à analyser (1-365)
-3. Cliquer sur "Scanner"
-4. Consulter les résultats dans la ListView
-5. Optionnel: Exporter en CSV
+Consultez la documentation complète pour les détails d'utilisation.
 
 
-## Interface
+---
 
-### Contrôles
+## 🛠️ Stack Technique
 
-- **Nombre de jours à analyser**: Période d'extraction des événements
-- **Scanner**: Démarre l'analyse du journal Security
-- **Exporter CSV**: Sauvegarde les résultats au format CSV UTF-8
-
-### Colonnes ListView
-
-| Colonne | Description |
-|---------|-------------|
-| Horodatage | Date et heure de l'événement |
-| IP Client | Adresse IP source de la connexion |
-| Nom Client | Nom de la machine cliente |
-| Utilisateur | Compte utilisateur cible |
-| Service | Processus/service d'authentification |
-| Event ID | Identifiant de l'événement (4624) |
-
-
-## Logs
-
-Les logs sont stockés dans:
-```
-%TEMP%\WinTools_NTLMAudit_log.txt
+```text
+💻 Langage Principal → C++
+🔧 Développement     → Bonnes pratiques & code propre
+📊 Qualité           → Tests & documentation
+🔒 Sécurité          → Audit de code & best practices
 ```
 
+---
 
-## 🚀 Cas d'usage
+## 🤝 Contribution
 
-- **Migration Kerberos**: Identifier les systèmes utilisant encore NTLM
-- **Audit de sécurité**: Détecter les authentifications NTLM suspectes
-- **Conformité**: Documenter l'utilisation NTLM pour rapports de conformité
-- **Troubleshooting**: Analyser les échecs d'authentification
+Les contributions sont les bienvenues ! N'hésitez pas à :
 
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
-## 🔒 Sécurité & Éthique
+---
 
-**ATTENTION**: Cet outil nécessite des privilèges administrateur et accède aux journaux de sécurité système.
+## 📄 License
 
-- Utiliser uniquement sur des systèmes dont vous êtes propriétaire/administrateur
-- Respecter les politiques de sécurité de votre organisation
-- Ne pas partager les exports CSV (contiennent des informations sensibles)
-- Destiné à l'audit de sécurité légitime uniquement
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
+---
 
-## Limitations
-
-- Nécessite des privilèges administrateur
-- Performance dépend de la taille du journal Security
-- Ne détecte que les événements LogonType 3 (réseau)
-- Parsing XML simplifié (peut manquer certains cas edge)
-
-
-## Support
-
-Pour toute question ou suggestion:
-- Auteur: Ayi NEDJIMI
-- Projet: WinToolsSuite
-
-
-## 📄 Licence
-
-MIT License - Copyright (c) 2025 Ayi NEDJIMI
-
-
-- --
+## 📬 Contact
 
 <div align="center">
 
-**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
+**Développé par Ayi NEDJIMI Consultants**
 
-</div>
+Expert en Cybersécurité & Intelligence Artificielle
 
-- --
-
-<div align="center">
-
-**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
-
-</div>
-
-- --
-
-<div align="center">
-
-**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
-
-</div>
-
-- --
-
-<div align="center">
-
-**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
+| Contact | Lien |
+|---------|------|
+| 🌐 **Site Web** | [ayinedjimi-consultants.fr](https://www.ayinedjimi-consultants.fr) |
+| 💼 **LinkedIn** | [Ayi NEDJIMI](https://www.linkedin.com/in/ayi-nedjimi) |
+| 🐦 **Twitter** | [@AyiNEDJIMI](https://x.com/AyiNEDJIMI) |
 
 </div>
 
@@ -152,6 +104,12 @@ MIT License - Copyright (c) 2025 Ayi NEDJIMI
 
 <div align="center">
 
-**⭐ Si ce projet vous plaît, n'oubliez pas de lui donner une étoile ! ⭐**
+### ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile ! ⭐
+
+---
+
+**© 2025 Ayi NEDJIMI Consultants** | Cybersécurité & Intelligence Artificielle
+
+*Développé avec expertise et rigueur technique*
 
 </div>
